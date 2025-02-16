@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456mysql
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 2000
+  elasticsearch:
+    username: elastic
+#    password: XdnlSboM9akcIXO5yMUe
+    uris: localhost:9200
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: /test01
+    username: user
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+product:
+  image:
+    upload:
+      path: D:/workspace/test/javatest/src/main/resources/static/uploads
+logging:
+  level:
+    com.test.rabbitmq: debug
+
